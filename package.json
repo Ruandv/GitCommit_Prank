@@ -1,0 +1,24 @@
+{
+  "name": "gitcommit_prank",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruandv/GitCommit_Prank.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ruandv/GitCommit_Prank/issues"
+  },
+  "homepage": "https://github.com/Ruandv/GitCommit_Prank#readme",
+  "description": "",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

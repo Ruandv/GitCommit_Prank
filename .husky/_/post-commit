@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/h"
+# Git Laugh Track - post-commit hook
+# bash convert_mp3_to_wav.sh
+SOUND_DIR="$(dirname "$0")/sounds"
+console.log(SOUND_DIR)
+if [ ! -d "$SOUND_DIR" ]; then
+    exit 0
+fi
+
+# Pick a random wav
+SOUND_FILE=$(find "$SOUND_DIR" -type f -name "*.wav" | shuf -n 1)
+powershell -c "(New-Object Media.SoundPlayer '$SOUND_FILE').PlaySync();" &
+echo "Remember to LOCK YOUR PC!!!"
