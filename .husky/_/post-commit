@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname "$0")/h"
+echo "Post-commit ran at $(date)" >> post-commit.log
 # Git Laugh Track - post-commit hook
 # bash convert_mp3_to_wav.sh
 SOUND_DIR="$(dirname "$0")/sounds"
