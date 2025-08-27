@@ -6,10 +6,12 @@ echo "Post-commit ran at $(date)" >> post-commit.log
 SOUND_DIR="$(dirname "$0")/sounds"
 echo "SOUND_DIR=$SOUND_DIR" >> post-commit.log
 if [ ! -d "$SOUND_DIR" ]; then
+    echo "Exiting" >> post-commit.log
     exit 0
 fi
  
 # Pick a random wav
 SOUND_FILE=$(find "$SOUND_DIR" -type f -name "*.wav" | shuf -n 1)
+echo "SOUND_FILE=$SOUND_FILE" >> post-commit.log
 powershell -c "(New-Object Media.SoundPlayer '$SOUND_FILE').PlaySync();" &
 echo "Remember to LOCK YOUR PC!!!"
