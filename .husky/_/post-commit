@@ -7,7 +7,7 @@ console.log(SOUND_DIR)
 if [ ! -d "$SOUND_DIR" ]; then
     exit 0
 fi
-
+ 
 # Pick a random wav
 SOUND_FILE=$(find "$SOUND_DIR" -type f -name "*.wav" | shuf -n 1)
 powershell -c "(New-Object Media.SoundPlayer '$SOUND_FILE').PlaySync();" &
