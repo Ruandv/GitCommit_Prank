@@ -3,8 +3,8 @@ echo "Post-commit ran at $(date)" >> post-commit.log
 # . "$(dirname "$0")/h"
 # Git Laugh Track - post-commit hook
 # bash convert_mp3_to_wav.sh
-# SOUND_DIR="$(dirname "$0")/sounds"
-echo "SOUND_DIR=$(dirname "$0")" >> post-commit.log
+SOUND_DIR="$(dirname "$0")/sounds"
+echo "SOUND_DIR=$SOUND_DIR" >> post-commit.log
 if [ ! -d "$SOUND_DIR" ]; then
     exit 0
 fi
